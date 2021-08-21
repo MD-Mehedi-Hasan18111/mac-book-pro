@@ -55,7 +55,8 @@ document.getElementById('apply').onclick = function () {
     const promoCodeInput = document.getElementById('promo-code');
     if (promoCodeInput.value == 'stevekaku') {
         const tweentyPercentTaka = 20 / 100 * subTotalNum;
-        totalPriceSpan.innerText = totalPriceNum - tweentyPercentTaka;
+        const lastPrice = subTotalNum - tweentyPercentTaka;
+        totalPriceSpan.innerText = lastPrice;
     }
     promoCodeInput.value = '';
 }
